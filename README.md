@@ -1,6 +1,14 @@
-<p align="right">                                            <p align="center">
-  <img src="logo.png" alt="ALLauncher Logo" width="150" />     <img src"logo.png" alt="ALLauncher Logo" width="150" />
-</p>                                                         </p>
+<p align="right">
+  <img src="logo.png" alt="ALLauncher Logo" width="150" />
+</p>
+
+<p align="center">
+  <img src"logo.png" alt="ALLauncher Logo" width="150" />
+</p>
+
+<p align="left">
+  <img src"logo.png" alt="ALLauncher Logo" width="150" />
+</p>
 
 # ALLauncher
 
