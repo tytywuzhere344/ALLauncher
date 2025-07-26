@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="ALLauncher v1.0.0.mp4" alt="ALLauncher Video" width="300" />
+  <vid src="ALLauncher v1.0.0.mp4" alt="ALLauncher Video" width="300" />
 </p>
 
 # ALLauncher
