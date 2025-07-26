@@ -24,6 +24,8 @@ ALLauncher is a modern, user-friendly Minecraft launcher built on top of [Prism 
 - ❓ Some icons are missing
 - ☕ Java edition needs to be 21 +
 
+---
+
 ## 💻 Installation
 
 1. Download the latest `.deb` release from the [GitHub Releases page](https://github.com/tytywuzhere344/ALLauncher/releases)
