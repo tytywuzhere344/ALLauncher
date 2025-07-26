@@ -2,14 +2,6 @@
   <img src="logo.png" alt="ALLauncher Logo" width="150" />
 </p>
 
-<p align="center">
-  <img src"logo1.png" alt="ALLauncher Logo" width="150" />
-</p>
-
-<p align="left">
-  <img src"logo2.png" alt="ALLauncher Logo" width="150" />
-</p>
-
 # ALLauncher
 
 **The custom Minecraft launcher designed for flexibility and fun.**  
