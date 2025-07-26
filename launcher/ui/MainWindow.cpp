@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-only
 /*
- *  Prism Launcher - Minecraft Launcher
+ *  ALLauncher - Minecraft Launcher
  *  Copyright (C) 2022 Sefa Eyeoglu <contact@scrumplex.net>
  *  Copyright (C) 2023 TheKodeToad <TheKodeToad@proton.me>
  *
@@ -1290,7 +1290,7 @@ void MainWindow::globalSettingsClosed()
     updateThemeMenu();
     updateStatusCenter();
     // This needs to be done to prevent UI elements disappearing in the event the config is changed
-    // but Prism Launcher exits abnormally, causing the window state to never be saved:
+    // but ALLauncher exits abnormally, causing the window state to never be saved:
     APPLICATION->settings()->set("MainWindowState", QString::fromUtf8(saveState().toBase64()));
     update();
 }

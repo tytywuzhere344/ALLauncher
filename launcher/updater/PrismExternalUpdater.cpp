@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: GPL-3.0-only
 
 /*
- *  Prism Launcher - Minecraft Launcher
+ *  ALLauncher - Minecraft Launcher
  *  Copyright (C) 2023 Rachel Powers <508861+Ryex@users.noreply.github.com>
  *
  *  This program is free software: you can redistribute it and/or modify
@@ -57,7 +57,7 @@ PrismExternalUpdater::PrismExternalUpdater(QWidget* parent, const QString& appDi
     priv = new PrismExternalUpdater::Private();
     priv->appDir = QDir(appDir);
     priv->dataDir = QDir(dataDir);
-    auto settings_file = priv->dataDir.absoluteFilePath("prismlauncher_update.cfg");
+    auto settings_file = priv->dataDir.absoluteFilePath("allauncher_update.cfg");
     priv->settings = std::make_unique<QSettings>(settings_file, QSettings::Format::IniFormat);
     priv->allowBeta = priv->settings->value("allow_beta", false).toBool();
     priv->autoCheck = priv->settings->value("auto_check", false).toBool();

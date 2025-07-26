@@ -96,6 +96,6 @@ jobs:
       - name: Build Flatpak
         uses: flatpak/flatpak-github-actions/flatpak-builder@v6
         with:
-          bundle: PrismLauncher-${{ runner.os }}-${{ env.VERSION }}-Flatpak.flatpak
-          manifest-path: flatpak/org.prismlauncher.PrismLauncher.yml
+          bundle: ALLauncher-${{ runner.os }}-${{ env.VERSION }}-Flatpak.flatpak
+          manifest-path: flatpak/org.allauncher.ALLauncher.yml
           arch: ${{ matrix.arch }}

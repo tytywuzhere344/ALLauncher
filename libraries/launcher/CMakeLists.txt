@@ -3,39 +3,39 @@ project(launcher Java)
 find_package(Java 1.7 REQUIRED COMPONENTS Development)
 
 include(UseJava)
-set(CMAKE_JAVA_JAR_ENTRY_POINT org.prismlauncher.EntryPoint)
+set(CMAKE_JAVA_JAR_ENTRY_POINT org.allauncher.EntryPoint)
 set(CMAKE_JAVA_COMPILE_FLAGS -target 7 -source 7)
 
 set(SRC
-    org/prismlauncher/EntryPoint.java
-    org/prismlauncher/launcher/Launcher.java
-    org/prismlauncher/launcher/impl/AbstractLauncher.java
-    org/prismlauncher/launcher/impl/StandardLauncher.java
-    org/prismlauncher/exception/ParameterNotFoundException.java
-    org/prismlauncher/exception/ParseException.java
-    org/prismlauncher/utils/Parameters.java
-    org/prismlauncher/utils/ReflectionUtils.java
-    org/prismlauncher/utils/logging/Level.java
-    org/prismlauncher/utils/logging/Log.java
-    org/prismlauncher/legacy/LegacyProxy.java
+    org/allauncher/EntryPoint.java
+    org/allauncher/launcher/Launcher.java
+    org/allauncher/launcher/impl/AbstractLauncher.java
+    org/allauncher/launcher/impl/StandardLauncher.java
+    org/allauncher/exception/ParameterNotFoundException.java
+    org/allauncher/exception/ParseException.java
+    org/allauncher/utils/Parameters.java
+    org/allauncher/utils/ReflectionUtils.java
+    org/allauncher/utils/logging/Level.java
+    org/allauncher/utils/logging/Log.java
+    org/allauncher/legacy/LegacyProxy.java
 )
 
 set(LEGACY_SRC
-    legacy/org/prismlauncher/legacy/LegacyFrame.java
-    legacy/org/prismlauncher/legacy/LegacyLauncher.java
-    legacy/org/prismlauncher/legacy/fix/online/Handler.java
-    legacy/org/prismlauncher/legacy/fix/online/OnlineFixes.java
-    legacy/org/prismlauncher/legacy/fix/online/OnlineModeFix.java
-    legacy/org/prismlauncher/legacy/fix/online/SkinFix.java
-    legacy/org/prismlauncher/legacy/utils/Base64.java
-    legacy/org/prismlauncher/legacy/utils/api/MojangApi.java
-    legacy/org/prismlauncher/legacy/utils/api/Texture.java
-    legacy/org/prismlauncher/legacy/utils/json/JsonParseException.java
-    legacy/org/prismlauncher/legacy/utils/json/JsonParser.java
-    legacy/org/prismlauncher/legacy/utils/url/ByteArrayUrlConnection.java
-    legacy/org/prismlauncher/legacy/utils/url/UrlUtils.java
+    legacy/org/allauncher/legacy/LegacyFrame.java
+    legacy/org/allauncher/legacy/LegacyLauncher.java
+    legacy/org/allauncher/legacy/fix/online/Handler.java
+    legacy/org/allauncher/legacy/fix/online/OnlineFixes.java
+    legacy/org/allauncher/legacy/fix/online/OnlineModeFix.java
+    legacy/org/allauncher/legacy/fix/online/SkinFix.java
+    legacy/org/allauncher/legacy/utils/Base64.java
+    legacy/org/allauncher/legacy/utils/api/MojangApi.java
+    legacy/org/allauncher/legacy/utils/api/Texture.java
+    legacy/org/allauncher/legacy/utils/json/JsonParseException.java
+    legacy/org/allauncher/legacy/utils/json/JsonParser.java
+    legacy/org/allauncher/legacy/utils/url/ByteArrayUrlConnection.java
+    legacy/org/allauncher/legacy/utils/url/UrlUtils.java
     legacy/net/minecraft/Launcher.java
-    legacy/org/prismlauncher/legacy/LegacyProxy.java
+    legacy/org/allauncher/legacy/LegacyProxy.java
 )
 
 add_jar(NewLaunch ${SRC})

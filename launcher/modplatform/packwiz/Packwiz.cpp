@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-only
 /*
- *  Prism Launcher - Minecraft Launcher
+ *  ALLauncher - Minecraft Launcher
  *  Copyright (c) 2022 flowln <flowlnlnln@gmail.com>
  *  Copyright (c) 2023 Trial97 <alexandru.tripon97@gmail.com>
  *
@@ -196,10 +196,10 @@ void V1::updateModIndex(const QDir& index_dir, Mod& mod)
         auto tbl = toml::table{ { "name", mod.name.toStdString() },
                                 { "filename", mod.filename.toStdString() },
                                 { "side", ModPlatform::SideUtils::toString(mod.side).toStdString() },
-                                { "x-prismlauncher-loaders", loaders },
-                                { "x-prismlauncher-mc-versions", mcVersions },
-                                { "x-prismlauncher-release-type", mod.releaseType.toString().toStdString() },
-                                { "x-prismlauncher-version-number", mod.version_number.toStdString() },
+                                { "x-allauncher-loaders", loaders },
+                                { "x-allauncher-mc-versions", mcVersions },
+                                { "x-allauncher-release-type", mod.releaseType.toString().toStdString() },
+                                { "x-allauncher-version-number", mod.version_number.toStdString() },
                                 { "download",
                                   toml::table{
                                       { "mode", mod.mode.toStdString() },
@@ -272,15 +272,15 @@ auto V1::getIndexForMod(const QDir& index_dir, QString slug) -> Mod
         mod.name = stringEntry(table, "name");
         mod.filename = stringEntry(table, "filename");
         mod.side = ModPlatform::SideUtils::fromString(stringEntry(table, "side"));
-        mod.releaseType = ModPlatform::IndexedVersionType(table["x-prismlauncher-release-type"].value_or(""));
-        if (auto loaders = table["x-prismlauncher-loaders"]; loaders && loaders.is_array()) {
+        mod.releaseType = ModPlatform::IndexedVersionType(table["x-allauncher-release-type"].value_or(""));
+        if (auto loaders = table["x-allauncher-loaders"]; loaders && loaders.is_array()) {
             for (auto&& loader : *loaders.as_array()) {
                 if (loader.is_string()) {
                     mod.loaders |= ModPlatform::getModLoaderFromString(QString::fromStdString(loader.as_string()->value_or("")));
                 }
             }
         }
-        if (auto versions = table["x-prismlauncher-mc-versions"]; versions && versions.is_array()) {
+        if (auto versions = table["x-allauncher-mc-versions"]; versions && versions.is_array()) {
             for (auto&& version : *versions.as_array()) {
                 if (version.is_string()) {
                     auto ver = QString::fromStdString(version.as_string()->value_or(""));
@@ -292,7 +292,7 @@ auto V1::getIndexForMod(const QDir& index_dir, QString slug) -> Mod
             mod.mcVersions.sort();
         }
     }
-    mod.version_number = table["x-prismlauncher-version-number"].value_or("");
+    mod.version_number = table["x-allauncher-version-number"].value_or("");
 
     {  // [download] info
         auto download_table = table["download"].as_table();

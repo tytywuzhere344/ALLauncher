@@ -86,7 +86,7 @@
             <string>Prismlauncher</string>
             <key>CFBundleURLSchemes</key>
             <array>
-            <string>prismlauncher</string>
+            <string>allauncher</string>
             </array>
         </dict>
     </array>

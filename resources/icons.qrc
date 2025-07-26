@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<RCC version="1.0"><qresource prefix="/icons"><file>icons/icon-add-instance.svg</file><file>icons/icon-copy.svg</file><file>icons/icon-delete.svg</file><file>icons/icon-edit.svg</file><file>icons/icon-export.svg</file><file>icons/icon-folder.svg</file><file>icons/icon-help.svg</file><file>icons/icon-kill.svg</file><file>icons/icon-launcher.svg</file><file>icons/icon-play.svg</file><file>icons/icon-settings.svg</file><file>icons/icon-view-configs.svg</file><file>icons/icon-view-folder.svg</file></qresource></RCC>

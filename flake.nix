@@ -2,9 +2,9 @@
   description = "A custom launcher for Minecraft that allows you to easily manage multiple installations of Minecraft at once (Fork of MultiMC)";
 
   nixConfig = {
-    extra-substituters = [ "https://prismlauncher.cachix.org" ];
+    extra-substituters = [ "https://allauncher.cachix.org" ];
     extra-trusted-public-keys = [
-      "prismlauncher.cachix.org-1:9/n/FGyABA2jLUVfY+DEp4hKds/rwO+SCOtbOkDzd+c="
+      "allauncher.cachix.org-1:9/n/FGyABA2jLUVfY+DEp4hKds/rwO+SCOtbOkDzd+c="
     ];
   };
 
@@ -12,7 +12,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     libnbtplusplus = {
-      url = "github:PrismLauncher/libnbtplusplus";
+      url = "github:ALLauncher/libnbtplusplus";
       flake = false;
     };
 
@@ -107,14 +107,14 @@
             ```
 
             Feel free to ask any questions in our Discord server or Matrix space:
-              - https://prismlauncher.org/discord
-              - https://matrix.to/#/#prismlauncher:matrix.org
+              - https://allauncher.org/discord
+              - https://matrix.to/#/#allauncher:matrix.org
 
             And thanks for helping out :)
           '';
 
           # Re-use our package wrapper to wrap our development environment
-          qt-wrapper-env = packages'.prismlauncher.overrideAttrs (old: {
+          qt-wrapper-env = packages'.allauncher.overrideAttrs (old: {
             name = "qt-wrapper-env";
 
             # Required to use script-based makeWrapper below
@@ -140,7 +140,7 @@
           default = pkgs.mkShell {
             name = "prism-launcher";
 
-            inputsFrom = [ packages'.prismlauncher-unwrapped ];
+            inputsFrom = [ packages'.allauncher-unwrapped ];
 
             packages = with pkgs; [
               ccache
@@ -148,7 +148,7 @@
             ];
 
             cmakeBuildType = "Debug";
-            cmakeFlags = [ "-GNinja" ] ++ packages'.prismlauncher.cmakeFlags;
+            cmakeFlags = [ "-GNinja" ] ++ packages'.allauncher.cmakeFlags;
             dontFixCmake = true;
 
             shellHook = ''
@@ -172,7 +172,7 @@
       formatter = forAllSystems (system: nixpkgsFor.${system}.nixfmt-rfc-style);
 
       overlays.default = final: prev: {
-        prismlauncher-unwrapped = prev.callPackage ./nix/unwrapped.nix {
+        allauncher-unwrapped = prev.callPackage ./nix/unwrapped.nix {
           inherit
             libnbtplusplus
             qrcodegenerator
@@ -180,7 +180,7 @@
             ;
         };
 
-        prismlauncher = final.callPackage ./nix/wrapper.nix { };
+        allauncher = final.callPackage ./nix/wrapper.nix { };
       };
 
       packages = forAllSystems (
@@ -194,8 +194,8 @@
 
           # Grab our packages from it and set the default
           packages = {
-            inherit (prismPackages) prismlauncher-unwrapped prismlauncher;
-            default = prismPackages.prismlauncher;
+            inherit (prismPackages) allauncher-unwrapped allauncher;
+            default = prismPackages.allauncher;
           };
         in
 
@@ -213,11 +213,11 @@
         in
 
         {
-          prismlauncher-debug = packages'.prismlauncher.override {
-            prismlauncher-unwrapped = legacyPackages'.prismlauncher-unwrapped-debug;
+          allauncher-debug = packages'.allauncher.override {
+            allauncher-unwrapped = legacyPackages'.allauncher-unwrapped-debug;
           };
 
-          prismlauncher-unwrapped-debug = packages'.prismlauncher-unwrapped.overrideAttrs {
+          allauncher-unwrapped-debug = packages'.allauncher-unwrapped.overrideAttrs {
             cmakeBuildType = "Debug";
             dontStrip = true;
           };
