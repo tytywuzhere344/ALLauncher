@@ -2,7 +2,7 @@
   <img src="logo.png" alt="ALLauncher Logo" width="150" />
 </p>
 
-[![Watch the demo]https://drive.google.com/file/d/1jKzhqHf7RaHBsX8lparJrzKS1juKA4vR/preview
+Watch the demo: https://drive.google.com/file/d/1jKzhqHf7RaHBsX8lparJrzKS1juKA4vR/preview
 
 
 # ALLauncher
