@@ -14,7 +14,6 @@ ALLauncher is a modern, user-friendly Minecraft launcher built on top of [Prism 
 - 🎮 Fully supports Minecraft Java Edition
 - 🔌 Modrinth and CurseForge integration
 - 🧱 Easy modpack and instance management
-- 📴 Offline mode support
 - 🧰 Sandboxed settings for enhanced compatibility
 - 🎨 Custom branding (logo, icons, theme)
 
