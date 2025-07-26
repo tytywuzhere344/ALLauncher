@@ -2,7 +2,7 @@
   <img src="logo.png" alt="ALLauncher Logo" width="150" />
 </p>
 
-<iframe src="https://drive.google.com/file/d/1jKzhqHf7RaHBsX8lparJrzKS1juKA4vR/preview" width="640" height="480" allow="autoplay"></iframe>
+<iframe src="https://drive.google.com/file/d/1jKzhqHf7RaHBsX8lparJrzKS1juKA4vR/preview" </iframe>
 
 # ALLauncher
 
