@@ -2,9 +2,8 @@
   <img src="logo.png" alt="ALLauncher Logo" width="150" />
 </p>
 
-<p align="center">
-  <vid src="ALLauncher v1.0.0.mp4" alt="ALLauncher Video" width="300" />
-</p>
+
+
 
 # ALLauncher
 
