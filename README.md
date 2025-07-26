@@ -1,10 +1,14 @@
-<p align="center">
+<p align="right">
   <img src="logo.png" alt="ALLauncher Logo" width="150" />
 </p>
 
 # ALLauncher
 
 **The custom Minecraft launcher designed for flexibility and fun.**  
+
+ALLauncher is based on the open-source Prism Launcher project.
+All original credits and contributors belong to them.
+
 ALLauncher is a modern, user-friendly Minecraft launcher built on top of [Prism Launcher](https://prismlauncher.org/), customized to better support offline use, embedded icons, and a streamlined experience for Linux (including ChromeOS).
 
 ---
